@@ -1,3 +1,29 @@
 .logo {
     height: 100px !important ;
 }
+
+.separator {
+    width: 100vw;
+    height: .1em;
+}
+
+.separator-dash {
+    height: 100%;
+}
+
+.p-bg-1 {
+    background-color: #EC2C55;
+
+}
+.p-bg-2 {
+    background-color: #E8DC3A;
+
+}
+.p-bg-3 {
+    background-color: #5EA9A5;
+
+}
+
+.bg-white {
+    background-color: white;
+}
