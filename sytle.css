@@ -1,16 +1,28 @@
 /* General Styling */
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw !important;
+    overflow-x: hidden;
+}
+
 .separator {
     width: 100vw;
-    height: .1em;
+    height: .3em;
 }
 
 .separator-dash {
     height: 100%;
 }
 
+.img-container {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+/* primary bacground colors */
 .p-bg-1 {
     background-color: #EC2C55;
-
+    
 }
 .p-bg-2 {
     background-color: #E8DC3A;
@@ -21,8 +33,72 @@
 
 }
 
+.bg-black {
+    background-color: black;
+}
+
+.bg-img-conf {
+    background-repeat: none;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* primary text colors */
+.pc-1{
+    color: #EC2C55;
+}
+.pc-2{
+    color: #E8DC3A;
+}
+.pc-3{
+    color: #5EA9A5;
+}
 .bg-white {
     background-color: white;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-fc {
+    width: fit-content;
+}
+
+.h-fc {
+    height: fit-content;
+}
+
+.bg-cover {
+    height: 100%;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.m-50 {
+    margin: 50px;
+}
+
+.p-100 {
+    padding: 100px;
+}
+
+.p-50{
+   padding: 50px;
+}
+
+
+.white-text {
+    color: white;
+}
+
+.text-container {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 /* Navigation Styling */
@@ -35,12 +111,110 @@
 }
 
 .spacing-100 {
-    height: 140px;
+    height: 126px;
 }
 
-
+.jumbotron .row{
+    max-height: 450px;
+}
 /* Image Carousel */
 .imageSlides {
-    height: 40vh;
     width: 100%;
+    max-height: 450px;
+    display: none;
+    animation: fadeIn 2s;
+    object-fit: cover;
+  
 }
+
+.ISContainer {
+    max-height: 450px;
+}
+
+
+
+.imageSlides.active {
+    display: block;
+    opacity: 1;
+   
+}
+
+/* Text carousel */
+.CTAslides {
+    display: none;
+    animation: fadeIn 2s;
+}
+
+.CTAslides.active {
+    display: block;
+    margin: 150px auto ;
+    opacity: 1;
+}
+
+
+
+/* Forums */
+
+
+
+.forum-section {
+
+    background-image: url('Assets/168005515_1214397079014292_1597394195674964341_n.jpeg');
+    
+    height: 500px;
+    width: 100vw;
+}
+
+
+
+.forum-section .card {
+    height: 100px !important;
+    margin: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.forum-section .card-body {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    width: 80%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+
+  .growth-img {
+      width: 400px;
+     
+      text-align: center;
+      margin: 50px auto;
+  }
+
+/* Investment confrence section */
+.invest-conf-section {
+    background-image: url('Assets/82146192_876557289464941_2922967274925064192_n.jpeg');
+    
+    height: 400px;
+    width: 100vw;
+}
+
+/* Contact Section */
+
+.contact-icon  {
+    font-size: 40px;    
+    background-color: white;
+    padding: 10px;
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 50%;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+
+  
