@@ -19,6 +19,10 @@ body, html {
     width: fit-content;
 }
 
+.section-img {
+    width: 600px;
+}
+
 /* primary bacground colors */
 .p-bg-1 {
     background-color: #EC2C55;
@@ -58,7 +62,7 @@ body, html {
     background-color: white;
 }
 
-.w-80 {
+.w-md-80 {
     width: 80%;
 }
 
@@ -216,5 +220,76 @@ body, html {
     100% {opacity:1;}
   }
 
+
+@media only screen and (max-width : 450px) {
+    .separator {
+        height: .2em;
+        overflow: hidden;
+    }
+
+    .separator-dash {
+        height: .2em;
+    }
+    
+    .jumbotron .row{
+        max-height: 1000px;
+    }
+
+
+
+    .ISContainer {
+        max-height: 180px;
+    }
+    .imageSlides {
+        width: 100%;
+        max-height: 180px;
+        display: none;
+        animation: fadeIn 2s;
+        object-fit: cover;
+      
+    }
+
+    .CTAslides {
+        height: 300px;
+        padding: 0;
+        margin: 20px  !important;
+    }
+
+    .section-img {
+        width: 300px;
+    }
+
+    [class*="w-md-"] {
+        width: 90%;
+    }
+
+    [class*="p-"] {
+        padding: 30px;
+    }
+
+
+    .forum-section {
+        height: 1200px;
+    }
+
+    .invest-conf-section {
+        height: 770px;
+    }
+
+    .contact-section .card{
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    footer img {
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        padding : 5px !important;
+    }
+
+    
+}
 
   
