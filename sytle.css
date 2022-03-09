@@ -224,7 +224,7 @@ body, html {
   }
 
 
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 750px) {
 
     .logo {
         height: 70px !important;
@@ -261,7 +261,7 @@ body, html {
     }
 
     .CTAslides {
-        height: 250px;
+        height: 200px;
         padding: 0;
         margin: 20px  !important;
     }
@@ -276,6 +276,10 @@ body, html {
 
     [class*="p-"] {
         padding: 30px;
+    }
+
+    .f-sm-sm{
+        font-size: 20px;
     }
 
 
