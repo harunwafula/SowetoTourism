@@ -1,16 +1,25 @@
-var slideIndex = 0; //starting index
+
+
+var slideIndex = 0; //starting index for main jumbotron.
 var jumbotronImages = document.getElementsByClassName('imageSlides'); // get all images
 var ctaSlides = document.getElementsByClassName('CTAslides');
+var navItems = document.getElementsByClassName('nav-link');
 var curImageSlide = jumbotronImages[0];
 var curCTASlide = ctaSlides[0];
+var activeNavItem = document.getElementsByClassName('nav-link active');
+
+
 showSlides();
 
 
-
-function plusSlides(n, no) {
-  showSlides(slideIndex[no] += n, no);
+function setActiveNavItem(element) {
+  activeNavItem[0].classList.remove("active");
+  element.className += " active";
+  activeNavItem[0] = element;
 }
 
+
+// Auto slides animation
 function showSlides() {
   var i;
   // set the display for all of them to none
@@ -29,12 +38,12 @@ function swipeSlideToLeft() {
   curCTASlide.classList.remove("active");
 
   slideIndex++;
-  if (slideIndex > jumbotronImages.length) {slideIndex = 1}
-  
- 
+  if (slideIndex > jumbotronImages.length) { slideIndex = 1 }
+
+
   // curImageSlide[slideIndex-1].className += " active"
-  curImageSlide = jumbotronImages[slideIndex-1];
-  curCTASlide = ctaSlides[slideIndex-1];
+  curImageSlide = jumbotronImages[slideIndex - 1];
+  curCTASlide = ctaSlides[slideIndex - 1];
   curImageSlide.className += " active"
   curCTASlide.className += " active"
 }
@@ -44,12 +53,12 @@ function swipeSlideToRight() {
   curCTASlide.classList.remove("active");
 
   slideIndex--;
-  if (slideIndex < 1) {slideIndex = jumbotronImages.length}
-  
- 
+  if (slideIndex < 1) { slideIndex = jumbotronImages.length }
+
+
   // curImageSlide[slideIndex-1].className += " active"
-  curImageSlide = jumbotronImages[slideIndex-1];
-  curCTASlide = ctaSlides[slideIndex-1];
+  curImageSlide = jumbotronImages[slideIndex - 1];
+  curCTASlide = ctaSlides[slideIndex - 1];
   curImageSlide.className += " active"
   curCTASlide.className += " active"
 }
@@ -65,8 +74,8 @@ function handleGesture() {
   if (touchendX < touchstartX) {
     swipeSlideToLeft();
   }
-  if (touchendX > touchstartX){
-    swipeSlideToRight();  
+  if (touchendX > touchstartX) {
+    swipeSlideToRight();
   }
 }
 
@@ -82,7 +91,8 @@ slider.addEventListener('touchend', e => {
 
 // Scroll animations
 const scrollElements = document.querySelectorAll(".js-scroll");
-console.log(scrollElements);
+
+// Is element in view
 const elementInView = (el, dividend = 1) => {
   const elementTop = el.getBoundingClientRect().top;
 
@@ -110,8 +120,7 @@ const hideScrollElement = (element) => {
 
 const handleScrollAnimation = () => {
   scrollElements.forEach((el) => {
-    if (elementInView(el, 1.25)) {
-      console.log("true")
+    if (elementInView(el, 1.1)) {
       displayScrollElement(el);
     } else if (elementOutofView(el)) {
       hideScrollElement(el)
@@ -119,7 +128,7 @@ const handleScrollAnimation = () => {
   })
 }
 
-window.addEventListener("scroll", () => { 
+window.addEventListener("scroll", () => {
 
   handleScrollAnimation();
 });

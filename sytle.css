@@ -5,6 +5,17 @@ body, html {
     overflow-x: hidden;
 }
 
+body {
+    position: relative;
+}
+
+
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
 .separator {
     width: 100vw;
     height: .3em;
@@ -21,6 +32,15 @@ body, html {
 
 .section-img {
     width: 600px;
+}
+
+.anchor{
+    position: relative;
+    top: -108px;
+}
+
+.main-content {
+    position: relative;
 }
 
 /* primary bacground colors */
@@ -111,17 +131,22 @@ body, html {
 }
 
 .logo {
-    height: 100px !important ;
+    height: 80px !important ;
 }
 
 .spacing-100 {
-    height: 126px;
+    height: 106px;
 }
 
 .jumbotron .jumbotron-container{
     height: 450px;
     max-height: 450px;
 }
+
+.nav-link:hover {
+    font-weight: bold;
+}
+
 /* Image Carousel */
 .imageSlides {
     width: 100%;
@@ -217,6 +242,17 @@ body, html {
     width: 70px !important;
     height: 70px !important;
     border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Footer */
+footer .nav-link {
+    color: white !important;
+}
+
+footer .nav-link:hover {
+    font-weight: bold;
+    color: white !important;
 }
 
 .js-scroll{
