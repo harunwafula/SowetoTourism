@@ -17,8 +17,7 @@
     rel="stylesheet">
 </head>
 
-<body  data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" 
-tabindex="0">
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
 
   <!-- Navbar -->
   <div class="fixed-top">
@@ -50,6 +49,9 @@ tabindex="0">
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact" onclick="setActiveNavItem(this)">Get In Touch</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" onclick="setActiveNavItem(this)">Become a member</a>
             </li>
 
           </ul>
@@ -332,6 +334,66 @@ tabindex="0">
       </div>
     </section>
 
+    <!-- Member Registration Form -->
+    <a class="anchor" id="member"></a>
+    <section class="member-section">
+      <div class=" js-scroll slide-left">
+        <div class="row">
+
+
+          <div class="mx-auto w-md-50 m-5">
+            <h1 class="fw-bold text-center">
+              Become a member
+            </h1>
+            <form action="action_page.php">
+
+              <div class="form-group">
+                <label for="nameInput">Name</label>
+                <input class="form-control" id="nameInput" placeholder="Please enter first name">
+              </div>
+
+              <div class="form-group">
+                <label for="surnameInput">Surname</label>
+                <input class="form-control" id="surnameInput" placeholder="Please enter surname">
+              </div>
+
+             
+
+              <div class="form-group">
+                <label for="emailInput">Email address</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="Please enter email address">
+              </div>
+
+              <div class="form-group">
+                <label for="telephoneInput">Telephone</label>
+                <input class="form-control" id="telephoneInput" placeholder="Please enter your telephone number">
+              </div>
+              <div class="form-group">
+                <label for="companyNameInput">Company Name</label>
+                <input class="form-control" id="companyNameInput" placeholder="Please enter company name">
+              </div>
+              <div class="form-group">
+                <label for="telephoneInput">Company Address</label>
+                <input class="form-control" id="telephoneInput" placeholder="Please enter company address">
+              </div>
+
+
+
+              <div class="form-group">
+                <label for="messageTextArea">Tell us about your business</label>
+                <textarea class="form-control" id="messageTextArea" rows="3" placeholder="Please enter description"></textarea>
+              </div>
+
+
+              <button type="submit" class="btn p-bg-1"> Submit</button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
 
     <!-- Section 5 - Get in touch -->
     <a class="anchor" id="contact"></a>
@@ -403,6 +465,41 @@ tabindex="0">
             </div>
           </div>
         </div>
+
+
+
+
+
+
+        <div class="mx-auto w-md-50 m-5">
+          <h1 class="fw-bold text-center">
+            Send us a message
+          </h1>
+          <form action="action_page.php">
+
+            <div class="form-group">
+              <label for="nameInput">Full name</label>
+              <input class="form-control" id="nameInput" placeholder="Enter Full Name">
+            </div>
+
+            <div class="form-group">
+              <label for="emailInput">Email address</label>
+              <input type="email" class="form-control" id="emailInput" placeholder="Enter Email Address">
+            </div>
+
+
+
+            <div class="form-group">
+              <label for="messageTextArea">Message</label>
+              <textarea class="form-control" id="messageTextArea" rows="3" placeholder="Enter Messge"></textarea>
+            </div>
+
+
+            <button type="submit" class="btn p-bg-1"> Submit</button>
+
+          </form>
+        </div>
+
 
       </div>
     </section>
