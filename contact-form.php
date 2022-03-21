@@ -3,7 +3,7 @@
 if($_SERVER['REQUEST_METHOD'] == "POST") {
     $visitor_name = "";
     $visitor_email = "";
-    $email_title = "";
+    $message_title = "";
     $concerned_department = "";
     $visitor_message = "";
     $email_body = "<div>";
@@ -23,10 +23,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
                         </div>";
     }
       
-    if(isset($_POST['email_title'])) {
-        $email_title = filter_var($_POST['email_title'], FILTER_SANITIZE_STRING);
+    if(isset($_POST['message_title'])) {
+        $message_title = filter_var($_POST['message_title'], FILTER_SANITIZE_STRING);
         $email_body .= "<div>
-                           <label><b>Reason For Contacting Us:</b></label>&nbsp;<span>".$email_title."</span>
+                           <label><b>Reason For Contacting Us:</b></label>&nbsp;<span>".$message_title."</span>
                         </div>";
     }
       
@@ -49,9 +49,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
  
     $headers  = 'MIME-Version: 1.0' . "\r\n"
     .'Content-type: text/html; charset=utf-8' . "\r\n"
-    .'From: ' . $visitor_email . "\r\n";
+    .'From: ' . 'Soweto Tourism <info@sowetotourism.org.za>' . "\r\n";
       
-    if(mail($recipient, $email_title, $email_body, $headers)) {
+    if(mail($recipient, $message_title, $email_body, $headers)) {
         echo "<p>Thank you for contacting us, $visitor_name. You will get a reply within 24 hours.</p>";
     } else {
         echo '<p>We are sorry but the email did not go through.</p>';
