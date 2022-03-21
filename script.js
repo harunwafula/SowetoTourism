@@ -7,6 +7,7 @@ var navItems = document.getElementsByClassName('nav-link');
 var curImageSlide = jumbotronImages[0];
 var curCTASlide = ctaSlides[0];
 var activeNavItem = document.getElementsByClassName('nav-link active');
+var navBarCollapse = document.getElementsByClassName('collapse navbar-collapse');
 
 
 showSlides();
@@ -16,6 +17,8 @@ function setActiveNavItem(element) {
   activeNavItem[0].classList.remove("active");
   element.className += " active";
   activeNavItem[0] = element;
+  console.log(navBarCollapse)
+  navBarCollapse[0].classList.remove("show");
 }
 
 

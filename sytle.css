@@ -110,6 +110,10 @@ a{
     margin: 50px;
 }
 
+.my-30 {
+    margin: 20px 0px;
+}
+
 .p-100 {
     padding: 80px;
 }
@@ -192,13 +196,13 @@ a{
 
 
 
-/* Forums */
+/* services */
 
 
 
 .forum-section {
 
-    background-image: url('Assets/168005515_1214397079014292_1597394195674964341_n.jpeg');
+    background-image: url('Assets/168005515_1214397079014292_1597394195674964341_n-min.jpeg');
     
     height: 500px;
     width: 100vw;
@@ -233,7 +237,8 @@ a{
 
 /* Investment confrence section */
 .invest-conf-section {
-    background-image: url('Assets/82146192_876557289464941_2922967274925064192_n.jpeg');
+    background-image: url('Assets/164544107_1208924422894891_4583062321672089246_n-min.jpeg' );
+    background-position: center;
     
     height: 400px;
     width: 100vw;
@@ -249,6 +254,22 @@ a{
     height: 70px !important;
     border-radius: 50%;
     cursor: pointer;
+}
+
+#contact-form-response {
+    display: none;
+}
+
+#contact-form-response.active {
+    display: block;
+}
+
+#member-form-response {
+    display: none;
+}
+
+#member-form-response.active {
+    display: block;
 }
 
 /* Footer */
