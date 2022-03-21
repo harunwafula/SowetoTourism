@@ -41,7 +41,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
     }
       
   
-        $recipient = "harunsimiyuwafula@gmail.com";
+        $recipient = "zazak@sowetotourism.org.za";
     
   
       
