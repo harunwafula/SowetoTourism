@@ -8,11 +8,14 @@ var curImageSlide = jumbotronImages[0];
 var curCTASlide = ctaSlides[0];
 var activeNavItem = document.getElementsByClassName('nav-link active');
 var navBarCollapse = document.getElementsByClassName('collapse navbar-collapse');
+const date = new Date();
+var currYear = date.getFullYear();
+var copyright = document.getElementById("copyright");
 
 
 showSlides();
 
-
+// Set active navigation menu item
 function setActiveNavItem(element) {
   activeNavItem[0].classList.remove("active");
   element.className += " active";
@@ -21,6 +24,9 @@ function setActiveNavItem(element) {
   navBarCollapse[0].classList.remove("show");
 }
 
+
+// set copyright curr year
+copyright.innerHTML = "Copyright " + currYear + ". Soweto Tourism, All rights reserved."
 
 // Auto slides animation
 function showSlides() {
