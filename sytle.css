@@ -272,6 +272,8 @@ a{
     display: block;
 }
 
+
+
 /* Footer */
 footer .nav-link {
     color: white !important;
@@ -280,6 +282,28 @@ footer .nav-link {
 footer .nav-link:hover {
     font-weight: bold;
     color: white !important;
+}
+
+.socials i{
+    font-size: 50px;
+}
+
+.socials i:hover {
+    cursor: pointer;
+    font-size: 60px;
+}
+
+.bi-facebook {
+    color: #1877f2;
+}
+
+.bi-instagram {
+    color: #bc2a8d;
+}
+
+
+.bi-twitter {
+    color:#1DA1F2;
 }
 
 .js-scroll{
