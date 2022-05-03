@@ -1,7 +1,7 @@
 <?php
 
 function reCaptcha($recaptcha){
-  $secret = "6LflRJgfAAAAAAFPpHNr-d6g9gp97mGYQ5avxDUX";
+  $secret = "6LflRJgfAAAAAAFPpHNr-d6g9gp97mGYQ5avxDUXgithup";
   $ip = $_SERVER['REMOTE_ADDR'];
 
   $postvars = array("secret"=>$secret, "response"=>$recaptcha, "remoteip"=>$ip);
